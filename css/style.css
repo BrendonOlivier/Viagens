@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e3e3e3;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* HEADER */
+header {
+    width: 100vw;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+    transition: .5s ease-in-out;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    max-width: 40px;
+}
+
+
+/* Estilo menu dinamico */
+header .logo img.preta {
+    display: none;
+}
+
+header.rolar {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 0 12px #00000061;
+}
+
+header.rolar .menu-desktop nav ul li a {
+    color: transparent;
+    background: linear-gradient(108deg, #5697FF, #7D7BFF, #A75CFF);
+    background-clip: text;
+}
+
+header.rolar .btn-contato button {
+    border: 1px solid #000;
+    color: transparent;
+    background: linear-gradient(108deg, #5697FF, #7D7BFF, #A75CFF);
+    background-clip: text;
+}
+
+header.rolar .btn-contato button:hover {
+    background: rgb(3, 3, 91);
+    color: #fff;
+}
+
+header.rolar .logo .logo-branca {
+    display: none;
+}
+
+header.rolar .logo .preta {
+    display: block;
+}
+
+/* ------------------------------------------ */
+
+
+header .menu-desktop nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+header .menu-desktop nav ul li a {
+    color: #f1e6e6;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .4s ease-in-out;
+}
+
+header .menu-desktop nav ul li:hover {
+    transform: scale(1.1);
+}
+
+header .btn-contato button {
+    width: 140px;
+    height: 50px;
+}
+
+header .btn-contato button,
+.hero-site button,
+.hoteis button {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+header .btn-contato button:hover,
+.hero-site button:hover,
+.hoteis button:hover {
+    background-color: rgb(3, 3, 91);
+    color: #fff;
+}
+
+header .btn-contato button:activ,
+.hero-site button:active,
+.hoteis button:active {
+    background-color: rgba(255, 255, 255, 0.586);
+}
+
+/* Estilo do botão do menu Mobile */
+header .btn-menu-mob {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+header .btn-menu-mob div {
+    background-color: #fff;
+    height: 3px;
+    margin: 10px 0;
+    transition: .2s;
+}
+
+header .btn-menu-mob .line-menu-mob-1 {
+    width: 30px;
+}
+
+header .btn-menu-mob .line-menu-mob-2 {
+    width: 20px;
+}
+
+header.rolar .btn-menu-mob div {
+    background-color: #000;
+}
+
+header .btn-menu-mob .line-menu-mob-1.ativo1 {
+    transform: rotate(45deg) translate(31%);
+    background-color: #fff;
+}
+
+header .btn-menu-mob .line-menu-mob-2.ativo2 {
+    transform: rotate(-45deg) translate(31%);
+    width: 30px;
+    background-color: #fff;
+}
+
+body.no-overflow {
+    overflow: hidden;
+}
+
+/* Estilo do Menu Mobile */
+header .menu-mobile {
+    width: 0;
+    height: 0;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    transition: .6s;
+}
+
+header .menu-mobile nav {
+    width: 95%;
+}
+
+header .menu-mobile nav a {
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    padding: 20px 0;
+    transition: .5s;
+}
+
+header .menu-mobile nav a:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 20px #fff;
+}
+
+header .menu-mobile.abrir {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* ------------------------------------------ */
+
+/* MAIN */
+main.hero-site {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/BG3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-site::before {  
+    content: "";
+    position: absolute;   
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+} 
+
+.hero-site .interface {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 80px;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+
+.hero-site .txt-hero h1 span {
+    display: block;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p {
+    font-size: 25px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero span {
+    display: block;
+}
+
+.hero-site button {
+    width: 220px;
+    height: 60px;
+    font: 20px;
+}
+
+/* Estilos das vantagens */
+section.vantagens {
+    padding: 80px 0;
+}
+
+.vantagens .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 80px;
+}
+
+.vantagens .itens-container .img-itens img {
+    max-width: 480px;
+}
+
+
+.vantagens .itens-container .txt-itens h3 {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.vantagens .itens-container .txt-itens h3 span {
+    font-weight: 100;
+    color: rgb(66, 66, 66);
+}
+
+.vantagens .itens-container .txt-itens p {
+    font-size: 20px;
+}
+
+/* CONTATO */
+section.contato {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.txt-contato,
+.icons-contato {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.contato .txt-contato h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+.contato .txt-contato p {
+    font-size: 25px;
+    color: #000;
+}
+
+.contato .icons-contato button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+
+    width: 80%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+    transition: .3s ease-in-out;
+}
+
+.contato .icons-contato button:hover {
+    background-color: #000;
+}
+
+.contato .icons-contato button:hover i,
+.contato .icons-contato button:hover p {
+    color: #fff;
+}
+
+/* HOTÉIS */
+section.hoteis {
+    max-width: 100vw;
+    height: 600px;
+    background-image: url(../img/hotel-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hoteis>.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.752);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hoteis>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.hoteis h3 {
+    font-size: 80px;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hoteis h3 span {
+    display: block;
+    font-weight: 600;
+}
+
+.hoteis p {
+    margin: 30px 0;
+    font-size: 25px;
+}
+
+.hoteis button {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* FUNCIONAMENTO */
+section.como-funciona {
+    padding: 80px 0;
+}
+
+.txt-funciona,
+.instrucoes {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.como-funciona .txt-funciona {
+    position: sticky;
+    top: 50%;
+    padding-bottom: 50px;
+}
+
+.como-funciona .txt-funciona h3 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+.instrucoes .instru-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 40px;
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.instrucoes .instru-box img {
+    max-width: 100px;
+}
+
+
+.instrucoes .instru-box h4 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.instrucoes .instru-box h4 span {
+    font-weight: 300;
+}
+
+.instrucoes .instru-box p {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000;
+    max-width: 100vw;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .top-footer button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: .3s ease-in-out;
+}
+
+footer .top-footer button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+footer .middle-footer {
+    margin: 20px 0;
+}
+
+footer .middle-footer a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+footer .bottom-footer {
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .bottom-footer p {
+    color: #fff;
+    margin-top: 25px;
+    font-size: 15px;
+}

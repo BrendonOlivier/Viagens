@@ -1,0 +1,163 @@
+/* Responsividade até o maximo de tela com 1020px */
+@media screen and (max-width: 1020px){
+    header .btn-menu-mob {
+        display: block;
+    }
+
+    header .menu-desktop, .btn-contato {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    /* Responsividade Main */
+    .hero-site .txt-hero h1 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    
+    
+    .hero-site .txt-hero p {
+        font-size: 18px;
+        font-weight: 200;
+        margin: 20px 0;
+    }
+    
+    .hero-site .txt-hero span {
+        display: inline;
+    }
+
+    /* Responsividade Vantagens */
+    .vantagens .itens-container {
+        flex-direction: column;
+    }
+    
+    .vantagens .itens-container .img-itens img {
+        width: 100%;
+    }
+
+    
+    .vantagens .itens-container .txt-itens h3 {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .vantagens .itens-container .txt-itens p {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .vantagens .itens-container .item-1 {
+        order: 1;
+    }
+
+    .vantagens .itens-container .txt-1 {
+        order: 0;
+    }
+
+    /* Responsividade Contato */
+    .txt-contato,
+    .icons-contato {
+        display: block;
+        width: 100%;
+    }
+    
+    .contato .txt-contato h3 {
+        font-size: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    
+    .contato .txt-contato h3 span {
+        display: inline;
+    }
+    
+    .contato .txt-contato p {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .contato .icons-contato button {
+        width: 100%;
+    }
+
+    .contato .icons-contato button p{
+        font-size: 15px;
+    }
+
+    .contato .icons-contato button i {
+        font-size: 25px;
+    }
+
+    /* Responsividade Hotéis */
+    .hoteis h3 {
+        font-size: 37px;
+        line-height: 55px;
+        font-weight: 200;
+    }
+    
+    .hoteis p {
+        margin: 30px 0;
+        font-size: 16px;
+    }
+
+    /* Responsividade Funcionamento */
+    .txt-funciona, .instrucoes {
+        display: block;
+        width: 100%;
+    }
+    
+    .como-funciona .txt-funciona {
+        position: static;
+    }
+    
+    .como-funciona .txt-funciona h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .instrucoes .instru-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .instrucoes .instru-box h4 {
+        font-size: 30px;
+    }
+
+    .instrucoes .instru-box p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    /* Responsividade Footer */
+    footer {
+        max-width: 100%;
+        padding: 30px 0;
+    }
+    
+    footer .top-footer button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+    
+    footer .middle-footer a {
+        margin: 10px 0;
+        font-size: 15px;
+        display: block;
+    }
+    
+    footer .bottom-footer p {
+        color: #fff;
+        margin-top: 12px;
+        font-size: 15px;
+    }
+
+    footer .bottom-footer span {
+        display: block;
+    }
+}
